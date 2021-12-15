@@ -40,6 +40,7 @@ func getDiffInQuantity(polymer string, insertions map[byte]map[byte]byte) {
 	}
 
 	fmt.Printf("Difference between most common element and least common element is %v occurrences.\n", maxCount-minCount)
+	fmt.Printf("max was %v and min was %v\n", maxCount, minCount)
 }
 
 func main() {
