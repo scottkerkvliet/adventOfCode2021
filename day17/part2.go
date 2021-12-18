@@ -19,7 +19,7 @@ func getXAtVelocity(step int, xVelocity int) int {
 	return dist
 }
 
-func countXVelocitiesInTarget(xTarget [2]int, steps []int, yVelocity int) (count int) {
+func countXVelocitiesInTarget(xTarget [2]int, steps []int) (count int) {
 	usedXVelocities := map[int]bool{}
 	for _, step := range steps {
 		upperVelocity := getXAtVelocity(step, step)
@@ -79,7 +79,7 @@ func printCountInitialVelocities(target [2][2]int) {
 	maxYVelocity := getMaxYVelocity(target[1])
 	for yVelocity := maxYVelocity; yVelocity >= (maxYVelocity*-1)-1; yVelocity-- {
 		steps := getStepsInYTarget(yVelocity, target[1])
-		xVelocities := countXVelocitiesInTarget(target[0], steps, yVelocity)
+		xVelocities := countXVelocitiesInTarget(target[0], steps)
 		numVelocities += xVelocities
 	}
 
