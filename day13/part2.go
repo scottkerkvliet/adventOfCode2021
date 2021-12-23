@@ -16,7 +16,7 @@ func max(a, b int) int {
 func printGrid(grid [][]bool) {
 	chars := map[bool]string{
 		true: "#",
-		false: ".",
+		false: " ",
 	}
 
 	for _, row := range grid {
